@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <script src='js/jquery-3.3.1.min.js'></script>
+    <script src='bootstrap/popper.min.js'></script>
+    <script src='bootstrap/bootstrap.min.js'></script>
+</head>
+    <body>
+
+        <header>
+            <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+                <a class="navbar-brand">
+                    <img src="img/word.png" width="30" height="30" class="d-inline-block align-top mr-2" alt="">
+                    ¿Que deseas hacer?
+                </a>
+                <ul>
+                    <li class='title'>Exportar:</li>
+                    <li>
+                        <a>Documento 1</a>
+                    </li>
+                    <li>
+                        <a>Documento 2</a>
+                    </li>
+                    <li>
+                        <a>Documento 3</a>
+                    </li>
+                    <li>
+                        <a>Documento 4</a>
+                    </li>
+                    <li>
+                        <a>Documento 5</a>
+                    </li>
+                </ul>
+              </nav>
+        </header>
+
+        <div class="form-to-show">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 class="display-4">Documento 1</h1>
+                  <p class="lead">Completa los campos a continuación y luego presiona "Exportar" para descargar el documento</p>
+                </div>
+            </div>
+            <div class="container">
+                <form id='form_to_export'>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Nombre del cliente" name='nombre_cliente'>
+                        <input type="text" class="form-control" placeholder="Dni del cliente" name='dni_cliente'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Nacionalidad del cliente" name='nacionalidad_cliente'>
+                        <input type="text" class="form-control" placeholder="Fecha de nacimiento del cliente" name='nacimiento_cliente'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Edad del cliente" name='edad_cliente'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Profesion del cliente" name='profesion_cliente'>
+                        <input type="text" class="form-control" placeholder="Ingreso anual del cliente" name='ingreso_anual_cliente'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Domicilio del cliente" name='domicilio_cliente'>
+                        <input type="text" class="form-control" placeholder="Localidad del cliente" name='localidad_cliente'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Partido del cliente" name='partido_cliente'>
+                        <input type="text" class="form-control" placeholder="Provincia del cliente" name='provincia_cliente'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Marca y modelo de vehiculo del cliente" name='marca_modelo_cliente'>
+                        <input type="text" class="form-control" placeholder="Dominio del vehiculo del cliente" name='dominio_vehiculo_cliente'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Nombre del tercero" name='nombre_tercero'>
+                        <input type="text" class="form-control" placeholder="Dni del tercero" name='dni_tercero'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Domicilio del tercero" name='domicilio_tercero'>
+                        <input type="text" class="form-control" placeholder="Localidad del tercero" name='localidad_tercero'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control w-100" placeholder="Partido del tercero" name='partido_tercero'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Marca y modelo de vehiculo del tercero" name='marca_modelo_tercero'>
+                        <input type="text" class="form-control" placeholder="Tipo vehiculo del tercero" name='tipo_vehiculo_tercero'>
+                    </div>
+
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Dominio del vehiculo del tercero" name='dominio_vehiculo_tercero'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Aseguradora" name='aseguradora'>
+                        <input type="text" class="form-control" placeholder="CUIT Aseguradora" name='cuit_aseguradora'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control w-100" placeholder="Domicilio aseguradora" name='domicilio_aseguradora'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Fecha del accidente" name='fecha_accidente'>
+                        <input type="text" class="form-control" placeholder="Hora del accidente" name='hora_accidente'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control w-100" placeholder="Lugar del accidente" name='lugar_accidente'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control w-100" placeholder="Calle por la que circulaba el cliente" name='calle_circulaba_cliente'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control w-100" placeholder="Direccion en la que circulaba el cliente" name='direccion_circulaba_cliente'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control w-100" placeholder="Calle por la que circulaba el tercero" name='calle_circulaba_tercero'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control w-100" placeholder="Direccion en la que circulaba el tercero" name='direccion_circulaba_tercero'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Parte del auto del cliente afectada" name='parte_cliente_afectada'>
+                        <input type="text" class="form-control" placeholder="Parte del auto del tercero afectada" name='parte_tercero_afectada'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Mecanica del accidente" name='mecanica_accidente'>
+                        <input type="text" class="form-control" placeholder="Intervencion policial" name='intervencion_policial'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control w-100" placeholder="Maniobra esperable por el tercero" name='maniobra_esperable_tercero'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Lugar de atencion del cliente" name='lugar_atencion_cliente'>
+                        <input type="text" class="form-control" placeholder="Practicas medicas al cliente" name='practicas_medicas_cliente'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Secuelas fisicas del cliente" name='secuelas_fisicas_cliente'>
+                        <input type="text" class="form-control" placeholder="Tratamiento medico al cliente" name='tratamiento_medico_cliente'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Porcentaje de incapacidad fisica" name='porcentaje_incapacidad_fisica'>
+                        <input type="text" class="form-control" placeholder="Porcentaje incapacidad psiquica" name='porcentaje_incapacidad_psiquica'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Monto reclamado por incapacidad fisica" name='monto_reclamado_incapacidad_fisica'>
+                        <input type="text" class="form-control" placeholder="Monto reclamado por incapacidad psiquica" name='monto_reclamado_incapacidad_psiquica'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Monto reclamado por daño moral" name='monto_dano_moral'>
+                        <input type="text" class="form-control" placeholder="Monto del presupuesto" name='monto_presupuesto'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Monto de la desvalorizacion" name='monto_desvalorizacion'>
+                        <input type="text" class="form-control" placeholder="Monto de la demanda" name='monto_demanda'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Nombre del testigo 1" name='nombre_testigo_1'>
+                        <input type="text" class="form-control" placeholder="Dni del testigo 1" name='dni_testigo_1'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control w-100" placeholder="Domicilio testigo 1" name='domicilio_testigo_1'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Nombre del testigo 2" name='nombre_testigo_2'>
+                        <input type="text" class="form-control" placeholder="Dni del testigo 2" name='dni_testigo_2'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control w-100" placeholder="Domicilio testigo 2" name='domicilio_testigo_2'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Nombre del testigo 3" name='nombre_testigo_3'>
+                        <input type="text" class="form-control" placeholder="Dni del testigo 3" name='dni_testigo_3'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control w-100" placeholder="Domicilio testigo 3" name='domicilio_testigo_3'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Nombre del testigo 4" name='nombre_testigo_4'>
+                        <input type="text" class="form-control" placeholder="Dni del testigo 4" name='dni_testigo_4'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control w-100" placeholder="Domicilio testigo 4" name='domicilio_testigo_4'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control" placeholder="Nombre del testigo 5" name='nombre_testigo_5'>
+                        <input type="text" class="form-control" placeholder="Dni del testigo 5" name='dni_testigo_5'>
+                    </div>
+                    <div class="form-group d-flex justify-content-between flex-wrap">
+                        <input type="text" class="form-control w-100" placeholder="Domicilio testigo 5" name='domicilio_testigo_5'>
+                    </div>
+                    <div class="form-btn d-flex justify-content-center mt-4 mb-4">
+                        <button type='button' class='btn btn-outline-success' onclick='setDocDataAndExport()'>Exportar</button>
+                    </div>
+                </form>
+            </div>
+        </div>        
+
+        <!-- <button onclick="Export2Doc(1, 'testing')">Descargar HTML</button> -->
+
+        <script src='js/app.js'></script>
+
+        <div class="element" id='element_to_export'></div>
+
+    </body>
+</html>

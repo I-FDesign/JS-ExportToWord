@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    padding: 0 !important;
+    padding-left: 1rem !important;
+}
+
+.navbar ul{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.navbar ul li{
+    list-style: none;
+    padding: 2vh 1vw;
+    cursor: pointer;
+}
+
+.navbar ul li.active,
+.navbar ul li:hover{
+    transition: .3s all ease;
+    background: #657eec;
+    color: white;
+}
+
+.navbar ul li.title{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.form-control{
+    width: 48% !important;
+}
