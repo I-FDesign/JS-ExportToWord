@@ -20,7 +20,10 @@
     cursor: pointer;
 }
 
-.navbar ul li.active,
+.navbar ul li.active{
+    background: #8599f3;
+    color: white;
+}
 .navbar ul li:hover{
     transition: .3s all ease;
     background: #657eec;
@@ -30,6 +33,11 @@
 .navbar ul li.title{
     font-size: 18px;
     font-weight: bold;
+}
+
+.navbar ul li.title:hover{
+    background: none;
+    color: black;
 }
 
 .form-control{
