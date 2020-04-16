@@ -43,3 +43,7 @@
 .form-control{
     width: 48% !important;
 }
+
+.element-to-export{
+    font-weight: bold;
+}

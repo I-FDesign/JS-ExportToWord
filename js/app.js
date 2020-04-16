@@ -6,6 +6,9 @@ let data = {};
 $(document).ready(() => {
     loadForm(exportType);
     getDataFromStorage();
+
+    const docoments = document.getElementsByClassName('to-export');
+    hideAllElements(docoments);
 })
 
 function getDataFromStorage() {
@@ -14,15 +17,44 @@ function getDataFromStorage() {
     }
 }
 
+function hideAllElements(elements) {
+    for(let i = 0; i < elements.length; i++) {
+        $(elements[i]).css({
+            'display': 'none'
+        });
+    }
+}
+
 function loadForm(formName) {
-    $('#form_to_show_container').load('forms/' + formName + '.html #' + formName + '_form');
+    const forms = document.getElementsByClassName('form');
+
+    hideAllElements(forms);
+
+    $('#' + formName + '_form').css({
+        'display': 'block'
+    });
+
+    setTimeout(() => {
+        setFormData();
+    }, 200)
+}
+
+function loadDoc(docName) {
+    const docs = document.getElementsByClassName('to-export');
+
+    hideAllElements(docs);
+
+    $('#' + docName + '_doc').css({
+        'display': 'block'
+    });
+
     setTimeout(() => {
         setFormData();
     }, 200)
 }
 
 function setFormData() {
-    const formChildNodes = document.getElementById('form_to_export').getElementsByClassName('form-control');
+    const formChildNodes = $('#' + exportType + '_form form')[0].getElementsByClassName('form-control');
     for(let i = 0; i < formChildNodes.length; i++) {
         const input = formChildNodes[i];
         input.value = data[input.name] ? data[input.name] : '';
@@ -45,14 +77,14 @@ function changeType(type) {
 function Export2Doc(data){
     var preHtml = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Export HTML To Doc</title></head><body>";
     var postHtml = "</body></html>";
-    $('#element_to_export').load('documents/' + exportType + '.html #' + exportType + '_doc');
+    loadDoc(exportType);
     setTimeout(() => {
         replaceInDoc().then(() => generateDocument(preHtml, postHtml, exportType));
     }, 1000)
 }
 
 function setDocDataAndExport() {
-    const formData = $('#form_to_export').serializeArray().reduce(function(obj, item) {
+    const formData = $('#' + exportType + '_form form').serializeArray().reduce(function(obj, item) {
         obj[item.name] = item.value;
         return obj;
     }, {});
