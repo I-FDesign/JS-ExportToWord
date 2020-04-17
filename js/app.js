@@ -48,6 +48,14 @@ function loadDoc(docName) {
         'display': 'block'
     });
 
+    const voutoTable = document.getElementById('vuoto_table');
+
+    if(docName !== 'demanda') {
+        voutoTable.style.display = 'none';
+    } else {
+        voutoTable.style.display = 'table';
+    }
+
     setTimeout(() => {
         setFormData();
     }, 200)
